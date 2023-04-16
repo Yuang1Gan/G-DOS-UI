@@ -12,8 +12,8 @@ off = Actor('关机')
 ifor = Actor('系统信息')
 #图标位置
 c.y = 200
-off.x = 900
-off.y = 835
+off.x = WIDTH // 2
+off.y = HEIGHT - 20
 ifor.y = 300
 #绘制
 def draw():
@@ -27,7 +27,7 @@ def draw():
         IMVI.draw()
         c.draw()
         a = datetime.datetime.now()
-        screen.draw.text(a.strftime('%Y-%m-%d %A %B %H:%M:%S'), (1422, 833), fontsize = 25)
+        screen.draw.text(a.strftime('%Y-%m-%d %A %B %H:%M:%S'), (WIDTH - 272, HEIGHT- 35), fontsize = 25)
         off.draw()
         ifor.draw()
 def update():
